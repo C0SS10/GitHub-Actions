@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de fallas</title>
+  </head>
+  <body>
+    <form action="/registrar-falla" method="post">
+      <h2>Registro de falla, <br /><span>rellene el formulario</span></h2>
+      <label for="nombre persona">Nombre:</label>
+      <input type="text" name="nombre" placeholder="Su nombre" />
+      <label for="descripcion">Descripcion:</label>
+      <textarea
+        name="descripcion"
+        id="descripcion"
+        cols="37"
+        rows="6"
+        placeholder="Describa la falla"
+      ></textarea>
+      <label for="gravedad">Gravedad:</label>
+      <select id="gravedad" name="gravedad">
+        <option value="Baja">Baja 🟢</option>
+        <option value="Media">Media 🟡</option>
+        <option value="Alta">Alta 🔴</option>
+      </select>
+      <button type="submit">Enviar registro</button>
+    </form>
+  </body>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      outline: none;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: darkslategray;
+    }
+
+    form {
+      padding: 20px;
+      width: 22rem;
+      min-width: 20rem;
+      background: #465e47;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1rem;
+      border-radius: 8px;
+      border: 2px solid #000;
+      box-shadow: 4px 4px #000;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+
+    h2 > span {
+      color: beige;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    label {
+      font-size: 1rem;
+      color: beige;
+      font-weight: 600;
+    }
+
+    input {
+      color: beige;
+      width: 16rem;
+      height: 2rem;
+      border-radius: 0.5rem;
+      border: 2px solid #000;
+      box-shadow: 2px 2px #000;
+      background-color: #465e47;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 6px;
+    }
+
+    input::placeholder {
+      color: #94c894;
+      font-weight: 500;
+    }
+
+    textarea {
+      color: beige;
+      width: 19.5rem;
+      height: 6rem;
+      border-radius: 0.5rem;
+      border: 2px solid #000;
+      box-shadow: 2px 2px #000;
+      background-color: #465e47;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 6px;
+      resize: none;
+    }
+
+    textarea::placeholder {
+      color: #94c894;
+      font-weight: 500;
+    }
+
+    select {
+      color: beige;
+      width: 7rem;
+      height: 2.5rem;
+      border-radius: 0.5rem;
+      border: 2px solid #000;
+      box-shadow: 2px 2px #000;
+      background-color: #465e47;
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: 6px;
+    }
+
+    button {
+      margin: 8px auto 0 auto;
+      width: 10rem;
+      height: 2.5rem;
+      border-radius: 0.5rem;
+      border: 2px solid #000;
+      box-shadow: 2px 2px #000;
+      background-color: #465e47;
+      font-size: 1rem;
+      font-weight: 600;
+      color: beige;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in, color 0.2s ease-in,
+        box-shadow 0.3s, transform 0.3s;
+    }
+
+    button:active {
+      box-shadow: 0px 0px #000;
+      transform: translate(2px, 2px);
+    }
+
+    button:hover {
+      background-color: #94c894;
+      color: #000;
+    }
+  </style>
+</html>
