@@ -1,0 +1,12 @@
+[
+  {
+    "nombre": "Carlos",
+    "descripcion": "Incumplimiento de procesos varios",
+    "gravedad": "Media"
+  },
+  {
+    "nombre": "Incumplimiento de pago",
+    "descripcion": "Esteban",
+    "gravedad": "Baja"
+  }
+]
