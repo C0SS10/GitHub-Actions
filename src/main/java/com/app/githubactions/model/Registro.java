@@ -1,4 +1,4 @@
-package com.app.githubactions;
+package com.app.githubactions.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
