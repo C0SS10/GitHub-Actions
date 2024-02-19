@@ -20,9 +20,6 @@ public class RegistroController {
       @RequestParam("nombre") String nombre,
       @RequestParam("gravedad") String gravedad) {
     Registro registro = new Registro(descripcion, nombre, gravedad);
-    registro.setNombre(nombre);
-    registro.setDescripcion(descripcion);
-    registro.setGravedad(gravedad);
 
     try {
       registroService.guardarRegistro(registro);
