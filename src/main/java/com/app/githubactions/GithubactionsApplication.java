@@ -3,6 +3,7 @@ package com.app.githubactions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 import com.app.githubactions.utils.ReporteController;
@@ -14,13 +15,17 @@ public class GithubactionsApplication {
     ReporteController reporteController;
 
     public static void main(String[] args) {
-        SpringApplication.run(GithubactionsApplication.class, args);
+    // Crear y obtener el contexto de la aplicación
+    ConfigurableApplicationContext context = SpringApplication.run(GithubactionsApplication.class, args);
+    
+    // Verificar si se pasó el argumento "generar-reporte"
+    if (args.length > 0 && args[0].equals("generar-reporte")) {
+        ReporteController reporteController = context.getBean(ReporteController.class);
+        // Llamar al método para generar el reporte
+        reporteController.generarReporte();
     }
-
-    public void run(String[] args) {
-        if (args.length > 0 && args[0].equals("generar-reporte")) {
-            reporteController.generarReporte();
-        }
-    }
-
+    
+    // Cerrar el contexto de la aplicación después de usarlo
+    context.close();
+}
 }
