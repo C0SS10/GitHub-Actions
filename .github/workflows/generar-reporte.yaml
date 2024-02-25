@@ -43,14 +43,7 @@ jobs:
         run: mvn install
       
       - name: Ejecutar aplicación de Spring Boot 🍃
-        run: mvn spring-boot:run &
-
-      - name: Esperar a que la aplicación se ejecute 🕒
-        run: sleep 30
-      
-      - name: Realizar solicitud HTTP 🌐
-        run: |
-          curl -X POST http://localhost:8080/generar-informe
+        run: mvn spring-boot:run -Dspring-boot.run.arguments=generar-reporte
         
       - name: Realizar commit y push de cambios 📤
         uses: stefanzweifel/git-auto-commit-action@v5
