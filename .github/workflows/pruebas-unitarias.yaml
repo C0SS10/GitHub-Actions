@@ -1,0 +1,33 @@
+name: Ejecutar pruebas unitarias 🔧
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Ejecutando-pruebas-unitarias:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Leyendo el repositorio 👀
+        uses: actions/checkout@v4
+      
+      - name: Configurando Java 17 📦
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'adopt'
+          java-version: '17'
+
+      - name: Configurando Maven 📦
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+      
+      - name: Instalando dependencias de Maven 📦
+        run: mvn install
+      
+      - name: Ejecutar pruebas con Maven 🧪
+        run: mvn test -Dtest=FallaControllerTest
