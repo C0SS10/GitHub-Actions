@@ -1,0 +1,32 @@
+name: Generar Informe de Fallas 📃
+
+# Cuando quiero que se ejecute el flujo de trabajo
+on:
+  # Por tiempo
+  #schedule:
+    # Cada 30 segundos, por ejemplo
+    #- cron: '*/30 * * * *'
+  push:
+    branches:
+      - main
+
+# Los pasos que se ejecutarán para realizar una tarea
+jobs:
+  # En dónde se ejecutará el flujo de trabajo
+  Generador-de-Reportes:
+    name: Máquina Virtual de Ubuntu 🐧
+    runs-on: ubuntu-latest
+
+    # Como se ejecutará el flujo de trabajo
+    steps:
+      - name: Leyendo el repositorio 👀
+        uses: actions/checkout@v4
+      
+      - name: Configurando Java 17 📦
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'oracle'
+          java-version: '17'
+      
+      - name: Ejecutar aplicación de Spring Boot 🍃
+        run: mvn spring-boot:run -Dspring-boot.run.arguments=generar-reporte
