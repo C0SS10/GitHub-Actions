@@ -37,6 +37,9 @@ jobs:
         # Esperar a que la aplicación esté disponible en el puerto 8080
         timeout-minutes: 3
 
+      - name: Retraso antes de continuar 🕒
+        run: sleep 60
+
       - name: Realizar solicitud HTTP 🌐
         run: |
           curl -X POST http://localhost:8080/generar-informe
