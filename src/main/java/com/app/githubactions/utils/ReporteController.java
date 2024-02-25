@@ -13,7 +13,7 @@ public class ReporteController {
     private final ReporteService reporteService;
     private final Generador generador;
     private final String rutaRegistros = "src/main/resources/registros.json";
-    private final String rutaReporte = System.getProperty("file.output.path");
+    private final String rutaReporte = "src/main/resources/reporte.pdf";
 
     public ReporteController(ReporteService reporteService, Generador generador) {
         this.reporteService = reporteService;
