@@ -14,3 +14,6 @@ Para instalar el proyecto, necesitas tener instalado Java 17 y Maven. Luego, pue
 git clone <url del repositorio>
 cd <directorio del repositorio>
 ./mvnw clean install
+```
+> [!TIP]
+> El formato del disparador 'cron': Minute [0,59], Hour [0,23], Day of the month [1,31], Month of the year [1,12], Day of the week ([0,6] with 0=Sunday)
