@@ -35,13 +35,7 @@ jobs:
       - name: Ejecutar aplicación de Spring Boot 🍃
         run: mvn spring-boot:run &
         # Esperar a que la aplicación esté disponible en el puerto 8080
-        timeout-minutes: 1
-      
-      - name: Esperar a que el endpoint esté disponible 🕒
-        uses: emilioschepis/wait-for-endpoint@v1.0.3
-        with:
-          url: http://localhost:8080/generar-informe
-          method: POST
+        timeout-minutes: 3
 
       - name: Realizar solicitud HTTP 🌐
         run: |
