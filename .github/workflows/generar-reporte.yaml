@@ -14,7 +14,7 @@ on:
 jobs:
   # En dónde se ejecutará el flujo de trabajo
   Generador-de-Reportes:
-    name: Máquina Virtual de Ubuntu 🐧
+    name: Generando reporte 📃
     runs-on: ubuntu-latest
 
     # Permisos para hacer commit y push
