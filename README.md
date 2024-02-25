@@ -1,4 +1,4 @@
-# GitHub Actions Project
+# Proyecto con Github Actions
 
 Este proyecto demuestra el uso de GitHub Actions en una aplicación Java con Maven.
 
