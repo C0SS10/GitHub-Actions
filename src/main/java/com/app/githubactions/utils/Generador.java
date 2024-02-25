@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+
 import com.app.githubactions.model.Registro;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
@@ -13,6 +15,7 @@ import com.itextpdf.text.Font;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 
+@Component
 public class Generador {
   public void generarReporte(List<Registro> registros, String urlSalida) throws IOException {
     // Lógica para generar reporte
