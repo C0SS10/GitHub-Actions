@@ -24,5 +24,8 @@ public class GithubactionsApplication {
             // Llamar al método para generar el reporte
             reporteController.generarReporte();
         }
+
+        // Cerrar el contexto de la aplicación para que en github action continue con el flujo
+        context.close();
     }
 }
