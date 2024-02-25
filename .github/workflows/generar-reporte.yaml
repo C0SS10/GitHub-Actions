@@ -49,4 +49,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Add report file 📃
-          commit_user_name: Esteban [GitActions]
+          commit_user_name: ${{ github.actor }}

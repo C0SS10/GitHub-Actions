@@ -30,11 +30,21 @@ public class Generador {
       doc.add(new Paragraph("Informe de fallas\n\n", new Font(Font.FontFamily.TIMES_ROMAN, 20)));
       doc.add(new Paragraph("Total de fallas: " + totalRegistros + "\n\n", new Font(Font.FontFamily.TIMES_ROMAN, 14)));
 
-      doc.add(new Paragraph("Estadísticas por gravedad\n\n", new Font(Font.FontFamily.TIMES_ROMAN, 14)));
+      doc.add(new Paragraph("Estadísticas por gravedad\n\n", new Font(Font.FontFamily.TIMES_ROMAN, 20)));
 
       for (Map.Entry<String, Integer> entry : statsPorGravedad.entrySet()) {
         doc.add(new Paragraph(entry.getKey() + ": " + entry.getValue()));
       }
+
+      doc.add(new Paragraph("Registros 📄\n", new Font(Font.FontFamily.TIMES_ROMAN, 20)));
+      // Agregar registros al PDF
+      for (Registro registro : registros) {
+        StringBuilder registroText = new StringBuilder();
+        registroText.append("Nombre: ").append(registro.getNombre()).append("\n");
+        registroText.append("Descripción: ").append(registro.getDescripcion()).append("\n");
+        registroText.append("Gravedad: ").append(registro.getGravedad()).append("\n\n");
+        doc.add(new Paragraph(registroText.toString(), new Font(Font.FontFamily.HELVETICA, 12)));
+    }
 
       doc.close();
 
