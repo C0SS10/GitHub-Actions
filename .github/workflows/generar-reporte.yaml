@@ -43,7 +43,7 @@ jobs:
         run: mvn install
       
       - name: Ejecutar aplicación de Spring Boot 🍃
-        run: mvn spring-boot:run &
+        run: mvn spring-boot:run
 
       - name: Realizar solicitud HTTP 🌐
         run: |
