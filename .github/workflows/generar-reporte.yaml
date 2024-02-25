@@ -33,7 +33,7 @@ jobs:
           java-version: '17'
       
       - name: Ejecutar aplicación de Spring Boot 🍃
-        run: mvn spring-boot:run -Dspring-boot.run.arguments=generar-reporte
+        run: mvn spring-boot:run -Dspring-boot.run.arguments=generar-reporte --file.output.path=/github/workspace/reporte.pdf
         
       - name: Realizar commit y push de cambios 📤
         uses: stefanzweifel/git-auto-commit-action@v5
