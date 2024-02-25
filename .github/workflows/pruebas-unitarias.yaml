@@ -3,7 +3,7 @@ name: Ejecutar pruebas unitarias 🔧
 on:
   push:
     branches:
-      - main
+      - unit-tests
 
 jobs:
   Ejecutando-pruebas-unitarias:
