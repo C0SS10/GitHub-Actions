@@ -1,12 +1,1 @@
-[
-  {
-    "nombre": "Carlos",
-    "descripcion": "Incumplimiento de procesos varios",
-    "gravedad": "Media"
-  },
-  {
-    "nombre": "Esteban",
-    "descripcion": "Incumplimiento de pago",
-    "gravedad": "Baja"
-  }
-]
+[{"nombre":"Carlos","descripcion":"Incumplimiento de procesos varios","gravedad":"Media"},{"nombre":"Esteban","descripcion":"Incumplimiento de pago","gravedad":"Baja"},{"nombre":"Descripción de la falla","descripcion":"John","gravedad":"Alta"}]
