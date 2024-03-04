@@ -15,5 +15,13 @@ git clone <url del repositorio>
 cd <directorio del repositorio>
 ./mvnw clean install
 ```
+
 > [!TIP]
-> El formato del disparador 'cron': Minute [0,59], Hour [0,23], Day of the month [1,31], Month of the year [1,12], Day of the week ([0,6] with 0=Sunday)
+> * * * * *
+>│ │ │ │ │
+>│ │ │ │ │
+>│ │ │ │ └──── Día de la semana (0 - 7) (Domingo es 0 o 7)
+>│ │ │ └────── Mes (1 - 12)
+>│ │ └──────── Día del mes (1 - 31)
+>│ └────────── Hora (0 - 23)
+>└──────────── Minuto (0 - 59)
