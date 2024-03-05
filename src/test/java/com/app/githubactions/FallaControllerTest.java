@@ -41,8 +41,8 @@ public class FallaControllerTest {
 
     // Afirmar que el método registrarFalla redirige a la página principal
     mockMvc.perform(MockMvcRequestBuilders.post("/registrar-falla")
-        .param("nombre", nombre)
         .param("descripcion", descripcion)
+        .param("nombre", nombre)
         .param("gravedad", gravedad))
         .andExpect(MockMvcResultMatchers.redirectedUrl("/"));
 

@@ -1,9 +1,10 @@
 name: Ejecutar pruebas unitarias 🔧
+run-name: Ejecutar pruebas unitarias 🧪
 
 on:
   push:
     branches:
-      - main
+      - unit-tests
 
 jobs:
   Ejecutando-pruebas-unitarias:

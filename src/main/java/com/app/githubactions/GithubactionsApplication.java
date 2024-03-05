@@ -26,6 +26,6 @@ public class GithubactionsApplication {
         }
 
         // Cerrar el contexto de la aplicación para que en github action continue con el flujo
-        context.close();
+        // context.close();
     }
 }
