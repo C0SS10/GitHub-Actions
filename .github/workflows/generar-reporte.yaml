@@ -4,9 +4,9 @@ run-name: Generar reporte de fallas 📃
 # Cuando quiero que se ejecute el flujo de trabajo
 on:
   # Por tiempo
-  schedule:
+  #schedule:
     # Cada 30 segundos, por ejemplo
-    - cron: '20 4 * * 1'
+    #- cron: '20 4 * * 1'
   push:
     branches:
       - main
